@@ -1,11 +1,14 @@
 package br.com.locadora.filme;
 
 import java.io.Serializable;
+import java.util.List;
 
+import br.com.locadora.ator.Ator;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToMany;
 
 @Entity
 public class Filme implements Serializable {
@@ -20,6 +23,9 @@ public class Filme implements Serializable {
 
 	private String nomeDiretor;
 
+	@ManyToMany(mappedBy = "filmes")
+	private List<Ator> atores;
+	
 	public Filme() {
 
 	}

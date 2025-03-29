@@ -1,31 +1,32 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://thymeleaf.org"
-      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-      layout:decorate="~{template.html}"
->
+<html lang="en" xmlns:th="http://thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{template.html}">
+
 <head>
-    <title>Cadastro Filme</title>
+	<title>Cadastro Filme</title>
 </head>
+
 <body>
 	<div layout:fragment="conteudo">
-    <div class="box">
-        <h1>Cadastro Filme</h1>
-        <form method="post" action="/filme">
-			<input type="hidden" name="_method" value="put" th:if="${filme!= null}">
-			<input type="hidden" name="id" th:value="${filme?.id}">
-			
-			<div>
-	            <label for="titulo"> Titulo: </label>
-	            <input type="text" id="titulo" name="titulo" th:value="${filme?.titulo}">
-	        </div>	 
-	         <div>
-	            <label for="nomeDiretor"> Nome Diretor: </label>
-	            <input type="text" id="nomeDiretor" name="nomeDiretor" th:value="${filme?.nomeDiretor}">
-	        </div>	 
-	        <input type="submit" value="Cadastrar">
-        </form>
-    </div>
-     </div>
-    
+		<div class="box">
+			<h1>Cadastro Filme</h1>
+			<form method="post" action="/filme">
+				<input type="hidden" name="_method" value="put" th:if="${filme!= null}">
+				<input type="hidden" name="id" th:value="${filme?.id}">
+
+				<div>
+					<label for="titulo"> Titulo: </label>
+					<input type="text" id="titulo" name="titulo" th:value="${filme?.titulo}">
+				</div>
+				<div>
+					<label for="nomeDiretor"> Nome Diretor: </label>
+					<input type="text" id="nomeDiretor" name="nomeDiretor" th:value="${filme?.nomeDiretor}">
+				</div>
+				<input type="submit" value="Cadastrar">
+			</form>
+		</div>
+	</div>
+
 </body>
+
 </html>

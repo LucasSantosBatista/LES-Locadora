@@ -3,30 +3,30 @@
 	layout:decorate="~{template.html}">
 
 <head>
-	<title>Lista de Filmes</title>
+	<title>Lista de Atores</title>
 </head>
 
 <body>
 	<div layout:fragment="conteudo">
-		<h1> Lista de Filmes</h1>
-		<a href="/filme/formulario">Novo</a>
+		<h1> Lista de Atores</h1>
+		<a href="/ator/formulario">Novo</a>
 		<table>
 			<thead>
 				<tr>
-					<th>Titulo</th>
-					<th>Diretor</th>
+					<th>Nome</th>
+					<th>País de Origem</th>
 				</tr>
 			</thead>
 			<tbody>
-				<tr th:each="filme : ${lista}">
-					<td th:text="${filme.titulo}"></td>
-					<td th:text="${filme.nomeDiretor}"></td>
+				<tr th:each="ator : ${lista}">
+					<td th:text="${ator.nome}"></td>
+					<td th:text="${ator.paisOrigem}"></td>
 					<td>
-						<a th:href="@{/filme/formulario?id={id}(id=${filme.id})}"><button>Editar</button></a>
+						<a th:href="@{/ator/formulario?id={id}(id=${ator.id})}"><button>Editar</button></a>
 
-						<form action="/filme" method="post">
+						<form action="/ator" method="post">
 							<input type="hidden" name="_method" value="delete">
-							<input type="hidden" name="id" th:value="${filme.id}">
+							<input type="hidden" name="id" th:value="${ator.id}">
 							<input type="submit" value="Excluir">
 						</form>
 					</td>

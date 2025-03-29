@@ -16,7 +16,7 @@ time, mark, audio, video {
     margin: 0;
     padding: 0;
     border: 0;
-    font-size: 60%;
+    font-size: 50%;
     font: inherit;
     vertical-align: baseline;
 }
@@ -120,11 +120,17 @@ button {
 
 /* NAVBAR */
 
-
-
-.nav-bar {
-    background-color: lightblue; /* Cor de fundo da barra de navegação */
-    padding: 10px; /* Espaçamento interno */
+nav {
+    background-color: var(--azul-medio);
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 3em;
+    padding: 0 1em;
+    z-index: 9999;
 }
 
 nav ul {
@@ -143,7 +149,7 @@ nav a {
     color: var(--azul-claro);
     text-transform: uppercase;
     font-weight: bold;
-    font-size: 1.2em;
+    font-size: 0.9em;
 }
 
 nav a:hover {
@@ -160,7 +166,7 @@ div > a {
 
 /* TABELA */
 
-/*table {
+table {
   width: 80%;
   margin: 0 auto;
   border-collapse: collapse;
@@ -197,7 +203,7 @@ tr:nth-child(even){
 
     background-color: var(--cinza-claro);
     color: black;
-}*/
+}
 
 /* FORM */
 
